@@ -16,16 +16,28 @@
     </header>
 
     <main class="container">
+        <div class="user-selector-container">
+            <label for="user-select">Hızlı Oyuncu Değiştir:</label>
+            <select id="user-select" onchange="location.href='users.html?userId=' + this.value">
+                <option value="">Oyuncu Seçin...</option>
+                <option value="u_1054">u_1054</option>
+                <option value="u_1021">u_1021</option>
+                <option value="u_1089">u_1089</option>
+                <option value="u_1004">u_1004</option>
+                <option value="u_1033">u_1033</option>
+            </select>
+        </div>
+
         <section class="profile-header card">
             <div class="user-info">
-                <h2>Oyuncu: <span class="highlight">u_1054</span></h2>
+                <h2>Oyuncu: <span class="highlight">Yükleniyor...</span></h2>
                 <div class="badge-list" id="badge-awards">
                     <span class="badge-gold">🥇 Altın Rozet</span>
                 </div>
             </div>
             <div class="user-score">
                 <span class="label">TOPLAM PUAN</span>
-                <span class="value">3250 XP</span>
+                <span class="value" id="user-total-points">Yükleniyor...</span>
             </div>
         </section>
 
@@ -36,7 +48,7 @@
                     <div class="card-header"><h2>📊 Oyuncu Metrikleri</h2></div>
                     <div class="card-body">
                         <div class="streak-box">
-                            <span class="streak-value">🔥 5 Gün</span>
+                            <span class="streak-value" id="login-streak">🔥 5 Gün</span>
                             <span class="label">Kesintisiz Giriş Serisi (Streak)</span>
                         </div>
 
@@ -69,6 +81,15 @@
             <div class="quests-column">
                 <section class="card">
                     <div class="card-header">
+                        <h2>🎯 Tetiklenen Görevler</h2>
+                    </div>
+                    <div id="triggered-quests-container">
+                        <p>Yükleniyor...</p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card-header">
                         <h2>🎯 Görev Motoru Çıktısı</h2>
                         <p class="subtitle">Aynı gün için en yüksek öncelikli görev seçildi</p>
                     </div>
@@ -77,21 +98,16 @@
                         <div class="quest-box selected">
                             <div class="q-header">
                                 <span class="q-tag">SEÇİLEN ÖDÜL</span>
-                                <span class="q-priority">Priority: 1</span>
+                                <span class="q-priority">Priority: --</span>
                             </div>
-                            <h3>PvP Ustası</h3>
-                            <p>Koşul: pvp_wins_today >= 3</p>
-                            <span class="q-reward">+100 XP</span>
+                            <h3>Yükleniyor...</h3>
+                            <p>--</p>
+                            <span class="q-reward">-- XP</span>
                         </div>
 
                         <h3 class="sub-title">Bastırılan (Suppressed) Görevler</h3>
-                        <div class="quest-box suppressed">
-                            <div class="q-header"><span>Günlük Giriş</span><span>P: 3</span></div>
-                            <span class="q-reward"><s>+20 XP</s></span>
-                        </div>
-                        <div class="quest-box suppressed">
-                            <div class="q-header"><span>Coop Takım Oyunu</span><span>P: 2</span></div>
-                            <span class="q-reward"><s>+50 XP</s></span>
+                        <div id="suppressed-quests-container">
+                            <p style="color:#999;">Yükleniyor...</p>
                         </div>
 
                     </div>
@@ -99,5 +115,8 @@
             </div>
         </div>
     </main>
+
+    <script src="assets/api.js"></script>
+    <script src="assets/main.js"></script>
 </body>
 </html>
