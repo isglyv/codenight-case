@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game+ Quest League | Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🎮 Game+ Quest League</div>
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="users.html">Kullanıcı Detayları</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="dashboard-grid">
+            
+            <section class="card">
+                <div class="card-header">
+                    <h2>🏆 Leaderboard (Top 10)</h2>
+                    <p class="subtitle">Toplam puana göre en iyi oyuncular</p>
+                </div>
+                <div id="leaderboard-container" class="table-responsive">
+                    <p class="loading-text">Yükleniyor...</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <h2>👥 Tüm Kullanıcılar</h2>
+                    <p class="subtitle">Sistemdeki oyuncular ve detayları</p>
+                </div>
+                <div id="user-list-container" class="table-responsive">
+                    <p class="loading-text">Yükleniyor...</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="assets/api.js"></script>
+    <script src="assets/main.js"></script>
+</body>
+</html>
