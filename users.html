@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Detayı | Game+ Quest League</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🎮 Game+ Quest League</div>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="users.html" class="active">Kullanıcı Detayları</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="profile-header card">
+            <div class="user-info">
+                <h2>Oyuncu: <span class="highlight">u_1054</span></h2>
+                <div class="badge-list" id="badge-awards">
+                    <span class="badge-gold">🥇 Altın Rozet</span>
+                </div>
+            </div>
+            <div class="user-score">
+                <span class="label">TOPLAM PUAN</span>
+                <span class="value">3250 XP</span>
+            </div>
+        </section>
+
+        <div class="dashboard-grid details-grid">
+            
+            <div class="metrics-column">
+                <section class="card">
+                    <div class="card-header"><h2>📊 Oyuncu Metrikleri</h2></div>
+                    <div class="card-body">
+                        <div class="streak-box">
+                            <span class="streak-value">🔥 5 Gün</span>
+                            <span class="label">Kesintisiz Giriş Serisi (Streak)</span>
+                        </div>
+
+                        <h3 class="sub-title">Bugünün Aktiviteleri</h3>
+                        <div class="stats-mini-grid">
+                            <div class="stat-item"><span class="val">2</span><span class="lbl">Login</span></div>
+                            <div class="stat-item"><span class="val">120</span><span class="lbl">Play Min</span></div>
+                            <div class="stat-item"><span class="val">4</span><span class="lbl">PvP Win</span></div>
+                        </div>
+
+                        <h3 class="sub-title">Son 7 Gün</h3>
+                        <div class="stats-mini-grid">
+                            <div class="stat-item"><span class="val">850</span><span class="lbl">Total Play</span></div>
+                            <div class="stat-item"><span class="val">250</span><span class="lbl">Topup (TRY)</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card mt-2">
+                    <div class="card-header"><h2>🔔 Bildirim Kayıtları (BiP)</h2></div>
+                    <div class="notification-list" id="notification-container">
+                        <div class="notif-item">
+                            <p><strong>Tebrikler!</strong> PvP Ustası görevinden 100 XP kazandın!</p>
+                            <small>Bugün, 14:30</small>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="quests-column">
+                <section class="card">
+                    <div class="card-header">
+                        <h2>🎯 Görev Motoru Çıktısı</h2>
+                        <p class="subtitle">Aynı gün için en yüksek öncelikli görev seçildi</p>
+                    </div>
+                    <div class="quest-display">
+                        
+                        <div class="quest-box selected">
+                            <div class="q-header">
+                                <span class="q-tag">SEÇİLEN ÖDÜL</span>
+                                <span class="q-priority">Priority: 1</span>
+                            </div>
+                            <h3>PvP Ustası</h3>
+                            <p>Koşul: pvp_wins_today >= 3</p>
+                            <span class="q-reward">+100 XP</span>
+                        </div>
+
+                        <h3 class="sub-title">Bastırılan (Suppressed) Görevler</h3>
+                        <div class="quest-box suppressed">
+                            <div class="q-header"><span>Günlük Giriş</span><span>P: 3</span></div>
+                            <span class="q-reward"><s>+20 XP</s></span>
+                        </div>
+                        <div class="quest-box suppressed">
+                            <div class="q-header"><span>Coop Takım Oyunu</span><span>P: 2</span></div>
+                            <span class="q-reward"><s>+50 XP</s></span>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
