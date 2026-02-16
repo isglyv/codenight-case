@@ -101,7 +101,7 @@ async function initUserDetail() {
     }
 }
 
-// Tetiklenen görevleri render et
+
 function renderTriggeredQuests(quests) {
     let container = document.getElementById('triggered-quests-container');
     if (!container) {

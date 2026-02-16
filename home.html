@@ -13,7 +13,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #003D82 0%, #0054a8 50%, #FFD700 100%);
             color: white;
             padding: 20px;
         }
@@ -26,6 +26,12 @@
             font-size: 80px;
             margin-bottom: 20px;
             animation: bounce 2s infinite;
+            font-weight: bold;
+            background: linear-gradient(180deg, #FFD700 0%, #FFC500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.3);
         }
 
         @keyframes bounce {
@@ -98,11 +104,12 @@
 
         .btn-dashboard {
             background: #FFD700;
-            color: #333;
+            color: #003D82;
         }
 
         .btn-dashboard:hover {
-            background: #FFF;
+            background: white;
+            color: #003D82;
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
@@ -115,7 +122,7 @@
 
         .btn-users:hover {
             background: white;
-            color: #764ba2;
+            color: #003D82;
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
@@ -144,10 +151,20 @@
     </style>
 </head>
 <body>
+    <header class="navbar">
+        <a class="brand-link" href="home.html" aria-label="Ana sayfaya git">
+            <img src="assets/logo.png" alt="Turkcell Logo" style="height: 50px; width: auto;">
+        </a>
+        <nav>
+            <a href="home.html" class="active">Ana Sayfa</a>
+            <a href="index.html">Dashboard</a>
+            <a href="users.html">Kullanıcı Detayları</a>
+        </nav>
+    </header>
+    
     <main class="hero-section">
         <div class="hero-content">
-            <div class="hero-logo">🎮</div>
-            <h1 class="hero-title">Game+ Quest League</h1>
+            <h1 class="hero-title">Turkcell Game+ Quest League</h1>
             <p class="hero-subtitle">Oyuncu Görev ve Puan Yönetim Sistemi</p>
             
             <p class="hero-description">
@@ -179,5 +196,29 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hakkında</h3>
+                <p>Game+ Quest League, Turkcell oyuncularının oyun içi aktivitelerini takip eden, görev yönetimi ve puan sistemi sunan modern bir platformdur.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Linkler</h3>
+                <a href="home.html">Ana Sayfa</a><br>
+                <a href="index.html">Dashboard</a><br>
+                <a href="users.html">Oyuncu Detayları</a>
+            </div>
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p>📧 <strong>support@gameplusquest.tr</strong></p>
+                <p>📱 Turkcell Game+ Destek Hattı</p>
+                <p>🌐 www.turkcell.com.tr/gameplus</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>Turkcell Game+ Quest League</strong>. Tüm Hakları Saklıdır. | Codenight Case</p>
+        </div>
+    </footer>
 </body>
 </html>

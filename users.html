@@ -8,7 +8,9 @@
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">🎮 Game+ Quest League</div>
+        <a class="brand-link" href="home.html" aria-label="Ana sayfaya git">
+            <img src="assets/logo.png" alt="Turkcell Logo" style="height: 50px; width: auto;">
+        </a>
         <nav>
             <a href="home.html">Ana Sayfa</a>
             <a href="index.html">Dashboard</a>
@@ -18,7 +20,7 @@
 
     <main class="container">
         <div class="user-selector-container">
-            <label for="user-select">Hızlı Oyuncu Değiştir:</label>
+            <label for="user-select">🎮 Oyuncu Seç:</label>
             <select id="user-select" onchange="location.href='users.html?userId=' + this.value">
                 <option value="">Oyuncu Seçin...</option>
                 <option value="u_1054">u_1054</option>
@@ -116,6 +118,30 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hakkında</h3>
+                <p>Game+ Quest League, Turkcell oyuncularının oyun içi aktivitelerini takip eden, görev yönetimi ve puan sistemi sunan modern bir platformdur.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Linkler</h3>
+                <a href="home.html">Ana Sayfa</a><br>
+                <a href="index.html">Dashboard</a><br>
+                <a href="users.html">Oyuncu Detayları</a>
+            </div>
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p>📧 <strong>support@gameplusquest.tr</strong></p>
+                <p>📱 Turkcell Game+ Destek Hattı</p>
+                <p>🌐 www.turkcell.com.tr/gameplus</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>Turkcell Game+ Quest League</strong>. Tüm Hakları Saklıdır. | Codenight Case</p>
+        </div>
+    </footer>
 
     <script src="assets/api.js"></script>
     <script src="assets/main.js"></script>
