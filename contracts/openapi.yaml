@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Game+ Quest API
+  version: 1.0.0
+
+paths:
+  /users:
+    get:
+      summary: List users with total points
+      responses:
+        '200':
+          description: OK
+
+  /users/{userId}/state:
+    get:
+      summary: Get user metrics
+      responses:
+        '200':
+          description: OK
+
+  /leaderboard:
+    get:
+      summary: Get leaderboard
+      responses:
+        '200':
+          description: OK
+
